@@ -1,3 +1,4 @@
+
 :root {
   --primary-color: #c9a861;
   --text-color: #fff;
@@ -16,6 +17,10 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+
+
+
+
 }
 
 /* Estilo del header */
@@ -110,7 +115,7 @@ nav {
   color: var(--text-color);
   margin-bottom: 2.5rem;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 3px rgba(83, 83, 83, 0.3);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo del botón */
@@ -473,26 +478,63 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
   }
 
-  .services-container {
+  .section-title {
+    color: #c9a861;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.services-container {
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: center;
+    gap: 30px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .service {
     text-align: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    width: 250px;
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service img {
-    width: 200px;
-    height: 150px;
+    width: 100%;
+    height: 160px;
     border-radius: 10px;
+    object-fit: cover;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.service:hover img {
-    transform: scale(1.1);
-    opacity: 0.8;
+.service p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
 }
+
+.service:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.service:hover img {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
